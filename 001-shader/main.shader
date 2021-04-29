@@ -1,10 +1,9 @@
-uniform float time;
-varying vec2 vUv;
-
 void main( void ) {
-    vec2 postition = - 1.0 + 2.0 * vUv;
-    vec2 uv = postition * 4.0;
+    float time = iGlobalTime;
     float t = time * 0.5;
+
+    vec2 uv = (gl_FragCoord.xy / iResolution.xx - 0.5);
+    uv = uv * 8.0;
 
     uv.x = sin(uv.x * sin(uv.x - t) * 0.4) + sin(uv.y + t);
     uv.y = sin(uv.y + sin(uv.x) * 16.0) + t;
