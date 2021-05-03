@@ -21,8 +21,8 @@ void main( void ) {
     uv.x = sin(uv.x * 10.0) - sin(uv.y * 5.0 - t);
     uv.y = sin(uv.y * 20.0) + sin(uv.x * 2.5 - t);
 
-    uv.x = sin(uv.x * 1.5);
-    uv.y = sin(uv.y * 1.5);
+    uv.x = sin(uv.x * 0.75);
+    uv.y = sin(uv.y * 1.25);
 
     // uv.x = smoothstep(0.1, 0.9, uv.x);
     // uv.y = smoothstep(0.1, 0.9, uv.y);
